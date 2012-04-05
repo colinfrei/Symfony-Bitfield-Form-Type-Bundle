@@ -6,7 +6,7 @@ Add the following to your deps file:
 
     [ColinFreiBitFieldFormTypeBundle]
         git=http://colinfrei@github.com/colinfrei/Symfony-Bitfield-Form-Type-Bundle.git
-        target=bundles/ColinFrei/BitFieldFormType
+        target=bundles/ColinFrei/BitFieldTypeBundle
 
 Register the `ColinFrei` namespace in the app/autoload.php file, by adding this line in the `$loader->registerNamespaces(array(` array:
 
