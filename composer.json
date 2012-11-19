@@ -1,5 +1,5 @@
 {
-    "name": "colinfrei/BitfieldTypeBundle",
+    "name": "colinfrei/bitfield-type-bundle",
     "description": "Adds a bitfield type to use in Symfony Forms",
     "license": "MIT",
     "require": {
