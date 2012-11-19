@@ -3,7 +3,8 @@
 namespace ColinFrei\BitFieldTypeBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 use ColinFrei\BitFieldTypeBundle\Form\DataTransformer\BitfieldToArrayTransformer;
 
@@ -17,14 +18,14 @@ class BitfieldType extends AbstractType
         );
     }
 
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->prependClientTransformer(new BitfieldToArrayTransformer());
     }
 
-    public function getParent(array $options)
+    public function getParent()
     {
-        return 'choice';
+        return new ChoiceType();
     }
 
     public function getName()
