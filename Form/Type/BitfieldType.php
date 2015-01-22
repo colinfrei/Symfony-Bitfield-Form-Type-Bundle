@@ -20,7 +20,7 @@ class BitfieldType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->prependClientTransformer(new BitfieldToArrayTransformer());
+        $builder->addModelTransformer(new BitfieldToArrayTransformer());
     }
 
     public function getParent()
