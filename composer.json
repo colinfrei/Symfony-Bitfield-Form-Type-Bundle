@@ -10,5 +10,8 @@
             "name": "Colin Frei",
             "email": "colin.frei@liip.ch"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": { "ColinFrei\\BitFieldTypeBundle\\": "" }
+    }
 }
