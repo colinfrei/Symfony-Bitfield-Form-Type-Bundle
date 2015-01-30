@@ -13,7 +13,7 @@ class BitfieldToArrayTransformer implements DataTransformerInterface
         $validBits = array();
         $currentBit = 1;
 
-        while ($currentBit < BitfieldToArrayTransformer::MAX_BITFIELDS_32)
+        while ($currentBit & BitfieldToArrayTransformer::MAX_BITFIELDS_32)
         {
             if ($currentBit & $bits) {
                 $validBits[] = $currentBit;
