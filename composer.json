@@ -3,7 +3,7 @@
     "description": "Adds a bitfield type to use in Symfony Forms",
     "license": "MIT",
     "require": {
-        "symfony/symfony": "2.6.*"
+        "symfony/symfony": "~2.6"
     },
     "authors": [
         {
