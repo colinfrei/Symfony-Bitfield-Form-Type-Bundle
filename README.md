@@ -19,12 +19,15 @@ Register the bundle in your app/AppKernel.php file, by adding this line in the `
 
 ## Usage
 
-Use the type `bitfield` when adding fields to the form, and pass in an array of options, like the type line in this example from the [Symfony documentation](http://symfony.com/doc/current/book/forms.html#building-the-form):
+Use the `BitfieldType` class when adding fields to the form, and pass in an array of options, like the type line in this example from the [Symfony documentation](http://symfony.com/doc/current/book/forms.html#building-the-form):
 
+    use ColinFrei\BitFieldTypeBundle\Form\Type\BitfieldType;
+    
     $form = $this->createFormBuilder($task)
         ->add('task', 'text')
         ->add('dueDate', 'date')
-        ->add('type', 'bitfield', array(
-            'choices' => array('1' => 'Annoying', '2' => 'Fun', '4' => 'Cool', '8' => 'Takes a while')
+        ->add('type', BitfieldType::class, array(
+            'choices' => array('Annoying' => '1', 'Fun' => '2', 'Cool' => '4', 'Takes a while' => '8'),
+            'choices_as_values' => true
         )
         ->getForm();
